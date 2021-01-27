@@ -6,7 +6,7 @@ import { AppLoading } from 'expo';
 
 const fetchFonts = () => {
   Font.loadAsync({
-    'open-sans': require('./assets/fonts/'),
+    'open-sans': require(''),
 
   })
 };

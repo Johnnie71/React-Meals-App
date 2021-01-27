@@ -2,23 +2,27 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
 
 const fetchFonts = () => {
    return Font.loadAsync({
-    'open-sans': require('./assets/fonts/opensans_regular.ttf'),
-    'open-sans-bold': require('./assets/fonts/opensans_bold.ttf')
+    'open-sans': require('./assets/fonts/OpenSans_Regular.ttf'),
+    'open-sans-bold': require('./assets/fonts/OpenSans_Bold.ttf')
   });
 };
 
 export default function App() {
 
-  const [fontLoaded, setFontLoaded] =useState(false)
+  const [fontLoaded, setFontLoaded] = useState(false);
 
   if(!fontLoaded) {
-    return <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setFontLoaded(true)}/>
+    return (
+        <AppLoading
+          startAsync={fetchFonts}
+          onFinish={setFontLoaded(true)}
+          onError={console.warn}
+        />
+    );
   }
 
   return (

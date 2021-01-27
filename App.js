@@ -6,9 +6,9 @@ import { AppLoading } from 'expo';
 
 const fetchFonts = () => {
   Font.loadAsync({
-    'open-sans': require(''),
-
-  })
+    'open-sans': require('./assets/fonts/opensans_regular.ttf'),
+    'open-sans-bold': require('./assets/fonts/opensans_bold.ttf')
+  });
 };
 
 export default function App() {

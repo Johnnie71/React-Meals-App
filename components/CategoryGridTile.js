@@ -1,16 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity  } from 'react-native';
+import { View,
+     Text,
+     StyleSheet, 
+     TouchableOpacity, 
+     Platform,
+     TouchableNativeFeedback  
+    } from 'react-native';
 import CategoriesScreen from '../screens/CategoriesScreen';
 
 const CategoryGridTile = props => {
+    let TouchableCmp = TouchableOpacity;
+
+    if(Platform.OS === 'android' && Platform.Version >= 21){
+        TouchableCmp = TouchableNativeFeedback;
+    }
     return (
-        <TouchableOpacity
-                style={styles.gridItem}
-                onPress={props.onSelect}>
-              <View style={{...styles.container, ...{backgroundColor: props.color }}}>
-                 <Text style={styles.text} numberOfLines={2}>{props.title}</Text>
-              </View>
-            </TouchableOpacity>
+        <View style={styles.gridItem}>
+            <TouchableCmp
+                    style={{flex: 1}}
+                    onPress={props.onSelect}>
+                <View style={{...styles.container, ...{backgroundColor: props.color }}}>
+                    <Text style={styles.text} numberOfLines={2}>{props.title}</Text>
+                </View>
+            </TouchableCmp>
+        </View>
     )
 };
 

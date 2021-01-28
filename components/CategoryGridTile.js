@@ -8,7 +8,7 @@ const CategoryGridTile = props => {
                 style={styles.gridItem}
                 onPress={props.onSelect}>
               <View style={{...styles.container, ...{backgroundColor: props.color }}}>
-                 <Text>{props.title}</Text>
+                 <Text style={styles.text} numberOfLines={2}>{props.title}</Text>
               </View>
             </TouchableOpacity>
     )
@@ -32,6 +32,12 @@ const styles = StyleSheet.create({
         padding: 10,
         justifyContent: 'flex-end',
         alignItems: 'flex-end'
+    },
+    text: {
+        color: 'black',
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'right'
     }
 });
 

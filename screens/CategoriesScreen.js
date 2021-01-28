@@ -10,7 +10,11 @@ const renderGridItem = (itemData) => {
 const CategoriesScreen = props => {
 
     return (
-        <Flatlist data={CATEGORIES} renderItem={renderGridItem} numColums={2} />
+        <Flatlist keyExtractor={(item, index) => item.id}
+            data={CATEGORIES}
+            renderItem={renderGridItem}
+            numColums={2}
+        />
     );
 };
 

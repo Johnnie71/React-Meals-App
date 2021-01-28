@@ -7,12 +7,12 @@ const CategoriesMealScreen = props => {
 
     const catId = props.navigation.getParam('categoryId');
 
-    const selectedCategories = CATEGORIES.find(cat => cat.id === catId);
+    const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
 
     return (
         <View style={styles.screen}>
             <Text>The Category Meal Screen!</Text>
-            <Text>{selectedCategories.title}</Text>
+            <Text>{selectedCategory.title}</Text>
             <Button title="Go To Details " onPress={() => {
                 props.navigation.navigate('MealDetail')
             }}/>
@@ -21,6 +21,16 @@ const CategoriesMealScreen = props => {
             }} />
         </View>
     )
+};
+
+CategoriesMealScreen.navigationOptions = (navigationData) => {
+    const catId = navigationData.navigation.getParam('categoryId');
+
+    const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
+
+    return {
+        headerTitle: selectedCategory.title
+    };
 };
 
 const styles = StyleSheet.create({

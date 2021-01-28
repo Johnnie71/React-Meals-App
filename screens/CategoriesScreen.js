@@ -33,13 +33,7 @@ const CategoriesScreen = props => {
         );
     };
 
-    CategoriesScreen.navigationOptions = {
-        headerTitle: 'Meal Categories',
-        headerStyle: {
-            backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
-        },
-        headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
-    };
+    
 
     return (
         <FlatList keyExtractor={(item, index) => item.id}
@@ -48,6 +42,14 @@ const CategoriesScreen = props => {
             numColumns={2}
         />
     );
+};
+
+CategoriesScreen.navigationOptions = {
+    headerTitle: 'Meal Categories',
+    headerStyle: {
+        backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
+    },
+    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
 };
 
 const styles = StyleSheet.create({

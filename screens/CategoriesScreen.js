@@ -3,12 +3,10 @@ import { View,
     Text, 
     StyleSheet,
     FlatList,
-    TouchableOpacity,
-    Platform
+    TouchableOpacity
 } from 'react-native';
 
 import { CATEGORIES }from '../data/dummy-data';
-import Colors from '../constants/Colors'
 
 
 

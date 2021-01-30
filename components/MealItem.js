@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Platform, TouchableNativeFeedback } from 'react-native';
+import { View, 
+    Text, 
+    StyleSheet, 
+    TouchableOpacity, 
+    Platform, 
+    TouchableNativeFeedback,
+    ImageBackground 
+} from 'react-native';
 
 const MealItem = props => {
 
@@ -14,6 +21,7 @@ const MealItem = props => {
             <Touchable onPress={props.onSelectMeal}>
                 <View>
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
+                        <ImageBackground source={{uri: props.image}} />
                         <Text>{props.title}</Text>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}> 

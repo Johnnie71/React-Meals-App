@@ -13,11 +13,13 @@ const MealItem = props => {
         <View style={styles.mealItem}>
         <Touchable onPress={props.onSelectMeal}>
             <View>
-                <View style={styles.mealRow}>
+                <View style={{...styles.mealRow, ...styles.mealHeader}}>
                     <Text>{props.title}</Text>
                 </View>
-                <View style={styles.mealRow} >
-                    
+                <View style={{...styles.mealRow, ...styles.mealDetail}}> 
+                    <Text>
+                        
+                    </Text>
                 </View>
             </View>
         </Touchable>
@@ -33,7 +35,13 @@ const styles = StyleSheet.create({
     },
     mealRow:{
         flexDirection: 'row',
-    }
+    },
+    mealHeader:{
+        height: '80%',
+    },
+    mealDetail:{
+
+    },
 });
 
 export default MealItem;

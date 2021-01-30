@@ -11,18 +11,18 @@ const MealItem = props => {
 
     return (
         <View style={styles.mealItem}>
-        <Touchable onPress={props.onSelectMeal}>
-            <View>
-                <View style={{...styles.mealRow, ...styles.mealHeader}}>
-                    <Text>{props.title}</Text>
+            <Touchable onPress={props.onSelectMeal}>
+                <View>
+                    <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
+                        <Text>{props.title}</Text>
+                    </View>
+                    <View style={{ ...styles.mealRow, ...styles.mealDetail }}> 
+                        <Text>{props.duration}m</Text>
+                        <Text>{props.complexity}</Text>
+                        <Text>{props.affordability}</Text>
+                    </View>
                 </View>
-                <View style={{...styles.mealRow, ...styles.mealDetail}}> 
-                    <Text>
-                        {props.duration}m
-                    </Text>
-                </View>
-            </View>
-        </Touchable>
+            </Touchable>
         </View>
     );
 };
@@ -37,10 +37,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     mealHeader:{
-        height: '80%',
+        height: '87%',
     },
     mealDetail:{
-
+        paddingHorizontal: 10,
+        justifyContent: 'space-between'
     },
 });
 

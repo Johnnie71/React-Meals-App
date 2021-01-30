@@ -7,9 +7,7 @@ const CategoryMealsScreen = props => {
 
     const renderMealItem = itemData => {
         return (
-            <View>
-                <Text>{itemData.item.title}</Text>
-            </View>
+            
         );
     };
 

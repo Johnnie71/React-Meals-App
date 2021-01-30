@@ -8,7 +8,12 @@ const CategoryMealsScreen = props => {
 
     const renderMealItem = itemData => {
         return (
-            <MealItem title={itemData.item.title} duration={itemData.item.duration} complexity={itemData.item.complexity} affordability={itemData.item.affordability} onSelectMeal={() => {}}/>
+            <MealItem 
+            title={itemData.item.title} 
+            duration={itemData.item.duration} 
+            complexity={itemData.item.complexity} 
+            affordability={itemData.item.affordability} 
+            onSelectMeal={() => {}}/>
         );
     };
 

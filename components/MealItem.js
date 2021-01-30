@@ -10,16 +10,30 @@ const MealItem = props => {
     }
 
     return (
+        <View style={styles.mealItem}>
         <Touchable onPress={props.onSelectMeal}>
             <View>
-                <Text>{itemData.item.title}</Text>
+                <View style={styles.mealRow}>
+                    <Text>{itemData.item.title}</Text>
+                </View>
+                <View style={styles.mealRow} >
+                    
+                </View>
             </View>
         </Touchable>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
-
+    mealItem:{
+        height: 200,
+        width: '100%',
+        backgroundColor: '#ccc'
+    },
+    mealRow:{
+        flexDirection: 'row',
+    }
 });
 
 export default MealItem;

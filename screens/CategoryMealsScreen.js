@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
 
-const CategoriesMealScreen = props => {
+const CategoryMealsScreen = props => {
 
     const catId = props.navigation.getParam('categoryId');
 
@@ -23,7 +23,7 @@ const CategoriesMealScreen = props => {
     )
 };
 
-CategoriesMealScreen.navigationOptions = (navigationData) => {
+CategoryMealsScreen.navigationOptions = (navigationData) => {
     const catId = navigationData.navigation.getParam('categoryId');
 
     const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default CategoriesMealScreen;
+export default CategoryMealsScreen;

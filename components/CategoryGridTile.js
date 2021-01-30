@@ -6,7 +6,6 @@ import { View,
      Platform,
      TouchableNativeFeedback  
     } from 'react-native';
-import CategoriesScreen from '../screens/CategoriesScreen';
 
 const CategoryGridTile = props => {
     let TouchableCmp = TouchableOpacity;

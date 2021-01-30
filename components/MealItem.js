@@ -21,8 +21,9 @@ const MealItem = props => {
             <Touchable onPress={props.onSelectMeal}>
                 <View>
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
-                        <ImageBackground source={{uri: props.image}} style={styles.bgImge} />
+                        <ImageBackground source={{uri: props.image}} style={styles.bgImge} >
                         <Text>{props.title}</Text>
+                        </ImageBackground>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}> 
                         <Text>{props.duration}m</Text>
@@ -52,7 +53,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     bgImge: {
-        width: '100%'
+        width: '100%',
+        height: '100%'
     }
 });
 

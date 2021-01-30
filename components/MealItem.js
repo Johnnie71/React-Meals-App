@@ -14,7 +14,7 @@ const MealItem = props => {
         <Touchable onPress={props.onSelectMeal}>
             <View>
                 <View style={styles.mealRow}>
-                    <Text>{itemData.item.title}</Text>
+                    <Text>{props.title}</Text>
                 </View>
                 <View style={styles.mealRow} >
                     

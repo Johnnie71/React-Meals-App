@@ -1,5 +1,3 @@
-import { in } from "react-native/Libraries/Animated/src/Easing";
-
 class Meal {
     constructor(id, 
         categoryIds, 

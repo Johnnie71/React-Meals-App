@@ -21,8 +21,13 @@ const MealItem = props => {
             <Touchable onPress={props.onSelectMeal}>
                 <View>
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
-                        <ImageBackground source={{uri: props.image}} style={styles.bgImge} >
-                        <Text style={styles.title}>{props.title}</Text>
+                        <ImageBackground 
+                        source={{uri: props.image}} 
+                        style={styles.bgImge} 
+                        >  
+                        <View style={styles.titleContainer}>
+                                <Text style={styles.title} numberOfLines={1} >{props.title}</Text>
+                        </View>
                         </ImageBackground>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}> 
@@ -40,7 +45,10 @@ const styles = StyleSheet.create({
     mealItem:{
         height: 200,
         width: '100%',
-        backgroundColor: '#ccc'
+        backgroundColor: '#CCD1D1',
+        borderRadius: 10,
+        // paddingHorizontal: '1%',
+        overflow: 'hidden',
     },
     mealRow:{
         flexDirection: 'row',
@@ -50,18 +58,24 @@ const styles = StyleSheet.create({
     },
     mealDetail:{
         paddingHorizontal: 10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: '13%'
     },
     bgImge: {
         width: '100%',
         height: '100%',
+        justifyContent: 'flex-end'
     },
     title:{
         fontWeight: 'bold',
         color: 'white',
+        textAlign: 'center'
+    },
+    titleContainer:{
         backgroundColor: 'rgba(0,0,0,0.4)',
         paddingVertical: 5,
-        paddingHorizontal: 12
+        paddingHorizontal: 12,
     }
 });
 

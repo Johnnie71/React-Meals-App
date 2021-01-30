@@ -20,7 +20,12 @@ const CategoryMealsScreen = props => {
 
     return (
         <View style={styles.screen}>
-            <FlatList data={displayedMeals} keyExtractor={(item, index) => item.id} renderItem={renderMealItem} />
+            <FlatList 
+            data={displayedMeals} 
+            keyExtractor={(item, index) => item.id} 
+            renderItem={renderMealItem} 
+            style={{width: '100%'}}
+            />
         </View>
     )
 };

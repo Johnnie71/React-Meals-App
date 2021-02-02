@@ -34,7 +34,7 @@ MealDetailScreen.navigationOptions = (navigationData) => {
                 iconName='ios-star' 
                 onPress={() => {
                     console.log('Mark as favorite!')
-                }} 
+                }}   
             />
         </HeaderButtons>
     };

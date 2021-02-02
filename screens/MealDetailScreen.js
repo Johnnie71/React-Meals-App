@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import { MEALS } from '../data/dummy-data';
 
@@ -26,7 +27,9 @@ MealDetailScreen.navigationOptions = (navigationData) => {
 
     return {
         headerTitle: selectedMeal.title,
-        headerRight: <Text>FAV!</Text>
+        headerRight: <HeaderButtons>
+            <Item title='Favorite' iconName='ios-star' />
+        </HeaderButtons>
     };
 };
 

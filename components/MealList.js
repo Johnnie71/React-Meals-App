@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList} from 'react-native';
 
 const MealList = props => {
     return (
-        <View style={styles.screen}>
+        <View style={styles.list}>
             <FlatList 
             data={displayedMeals} 
             keyExtractor={(item, index) => item.id} 
@@ -15,13 +15,12 @@ const MealList = props => {
 };
 
 const styles = StyleSheet.create({
-    screen:{
+    list:{
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         padding: '3%',
     }
-
 });
 
 export default MealList;

@@ -10,7 +10,7 @@ import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailScreen from '../screens/MealDetailScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import Colors from '../constants/Colors';
-import { createMaterialBottomTabNavigator } from 'react-native-materials';
+import { createMaterialBottomTabNavigator } from 'react-native-tabs';
 
 
 const MealsNavigator = createStackNavigator({
@@ -42,9 +42,9 @@ const tabScreenConfig = {
   }}
 };
 
-const MealsFavTabNavigator = Platform.OS === 'android' ? 
-  createMaterialBottomTabNavigator(tabScreenConfig, {
-    activeColor: Colors.accentColor,
+const MealsFavTabNavigator = Platform.OS === 'android'
+ ? createMaterialBottomTabNavigator(tabScreenConfig, {
+    activeTintColor: Colors.accentColor,
     shifting: true
   }) : createBottomTabNavigator(
     tabScreenConfig,

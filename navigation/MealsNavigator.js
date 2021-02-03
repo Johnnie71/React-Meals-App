@@ -56,15 +56,16 @@ const tabScreenConfig = {
   }}
 };
 
-const MealsFavTabNavigator = Platform.OS === 'android'
- ? createMaterialBottomTabNavigator(tabScreenConfig, {
-    activeColor: 'white',
-    shifting: true
-    }) 
-   : createBottomTabNavigator(tabScreenConfig, {
-          tabBarOptions: {
-            activeTintColor: Colors.primaryColor
-          }
-       });
+const MealsFavTabNavigator = 
+  Platform.OS === 'android'
+    ? createMaterialBottomTabNavigator(tabScreenConfig, {
+        activeTintColor: 'white',
+        shifting: true
+        }) 
+      : createBottomTabNavigator(tabScreenConfig, {
+              tabBarOptions: {
+                activeTintColor: Colors.primaryColor
+              }
+          });
 
 export default createAppContainer(MealsFavTabNavigator);

@@ -31,7 +31,7 @@ const MealsNavigator = createStackNavigator({
     }
 );
 
-createStackNavigator({
+const FavNavigator =  createStackNavigator({
   Favorites: FavoritesScreen,
   MealDetail: MealDetailScreen
 }, 
@@ -54,7 +54,7 @@ const tabScreenConfig = {
     },
     tabBarColor: Colors.primaryColor
   }},
-  Favorites: {screen: FavoritesScreen, navigationOptions: {
+  Favorites: {screen: FavNavigator, navigationOptions: {
     tabBarLabel: 'Favorites!',
     tabBarIcon: (tabInfo) => {
       return (

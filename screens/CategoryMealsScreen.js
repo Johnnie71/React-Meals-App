@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
-import MealItem from '../components/MealItem';
+import MealLisr from '../components/MealList';
+import MealList from '../components/MealList';
 
 const CategoryMealsScreen = props => {
 
@@ -12,7 +13,7 @@ const CategoryMealsScreen = props => {
     );
 
     return (
-        
+        <MealList />
     );
 };
 

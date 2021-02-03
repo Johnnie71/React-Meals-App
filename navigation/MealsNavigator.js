@@ -12,6 +12,13 @@ import Colors from '../constants/Colors';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
+const defaultStackNavOptions = {
+    headerStyle: {
+          backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
+    },
+      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
+};
+
 
 const MealsNavigator = createStackNavigator({
     Categories: CatgoriesScreen,
@@ -20,12 +27,7 @@ const MealsNavigator = createStackNavigator({
 },  
    {
     //   initialRouteName: 'Categories',
-      defaultNavigationOptions: {
-        headerStyle: {
-            backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
-        },
-        headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
-      }
+      defaultNavigationOptions: defaultStackNavOptions
     }
 );
 
@@ -35,12 +37,7 @@ createStackNavigator({
 }, 
 {
   //   initialRouteName: 'Categories',
-    defaultNavigationOptions: {
-      headerStyle: {
-          backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
-      },
-      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
-    }
+    defaultNavigationOptions: defaultStackNavOptions
   }
 );
 

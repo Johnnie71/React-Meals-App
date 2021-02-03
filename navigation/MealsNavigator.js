@@ -42,7 +42,7 @@ const tabScreenConfig = {
   }}
 };
 
-const MealsFavTabNavigator = Platform.OS === 'andorid' ? 
+const MealsFavTabNavigator = Platform.OS === 'android' ? 
   createMaterialBottomTabNavigator(tabScreenConfig, {
     activeColor: Colors.accentColor
   }) : createBottomTabNavigator(

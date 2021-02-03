@@ -36,6 +36,13 @@ MealDetailScreen.navigationOptions = (navigationData) => {
                     console.log('Mark as favorite!')
                 }}   
             />
+            <Item 
+                title='Favorite' 
+                iconName='ios-star-outline' 
+                onPress={() => {
+                    console.log('Mark as favorite!')
+                }}   
+            />
         </HeaderButtons>
     };
 };

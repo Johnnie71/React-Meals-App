@@ -17,7 +17,8 @@ const MealsNavigator = createStackNavigator({
     Categories: CatgoriesScreen,
     CategoryMeals: CategoryMealsScreen,
     MealDetail: MealDetailScreen,
-},  {
+},  
+   {
     //   initialRouteName: 'Categories',
       defaultNavigationOptions: {
         headerStyle: {
@@ -26,6 +27,21 @@ const MealsNavigator = createStackNavigator({
         headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
       }
     }
+);
+
+createStackNavigator({
+  Favorites: FavoritesScreen,
+  MealDetail: MealDetailScreen
+}, 
+{
+  //   initialRouteName: 'Categories',
+    defaultNavigationOptions: {
+      headerStyle: {
+          backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white' ,
+      },
+      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
+    }
+  }
 );
 
 const tabScreenConfig = {

@@ -13,7 +13,7 @@ const CategoryMealsScreen = props => {
     );
 
     return (
-        <MealList />
+        <MealList listData={displayedMeals} navigation={props.navigation} />
     );
 };
 

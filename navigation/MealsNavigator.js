@@ -52,7 +52,7 @@ const tabScreenConfig = {
       />
       );
     },
-    // tabBarColor: Colors.accentColor
+    tabBarColor: Colors.accentColor
   }}
 };
 
@@ -60,13 +60,11 @@ const MealsFavTabNavigator = Platform.OS === 'android'
  ? createMaterialBottomTabNavigator(tabScreenConfig, {
     activeColor: 'white',
     shifting: true
-  }) : createBottomTabNavigator(
-    tabScreenConfig,
-   {
-  tabBarOptions: {
-    activeTintColor: Colors.primaryColor,
-    shifting: true
-  }
-});
+    }) 
+   : createBottomTabNavigator(tabScreenConfig, {
+          tabBarOptions: {
+            activeTintColor: Colors.primaryColor
+          }
+       });
 
 export default createAppContainer(MealsFavTabNavigator);

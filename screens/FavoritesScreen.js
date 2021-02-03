@@ -5,7 +5,7 @@ import { MEALS } from '../data/dummy-data';
 const FavoritesScreen = props => {
 
     const favMeals = MEALS.filter(meal => meal.id === 'm1' || meal.id === 'm2');
-    return <MealList />
+    return <MealList listData={favMeals}/>
 };
 
 FavoritesScreen.navigationOptions = {

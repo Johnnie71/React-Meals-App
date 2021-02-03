@@ -29,4 +29,4 @@ const MealsFavTabNavigator = createBottomTabNavigator({
     Favorites: FavoritesScreen
 });
 
-export default createAppContainer(MealsFavTabNavigatorgit);
+export default createAppContainer(MealsFavTabNavigator);

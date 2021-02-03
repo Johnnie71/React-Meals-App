@@ -2,6 +2,25 @@ import React from 'react';
 import { View, StyleSheet, FlatList} from 'react-native';
 
 const MealList = props => {
+
+    const renderMealItem = itemData => {
+        return (
+            <MealItem 
+                title={itemData.item.title} 
+                duration={itemData.item.duration} 
+                complexity={itemData.item.complexity} 
+                affordability={itemData.item.affordability} 
+                image={itemData.item.imageUrl}
+                onSelectMeal={() => {
+                    props.navigation.navigate({
+                        routeName: 'MealDetail', params: {
+                           mealId: itemData.item.id
+                    }});
+                }}
+           />
+        );
+    };
+
     return (
         <View style={styles.list}>
             <FlatList 

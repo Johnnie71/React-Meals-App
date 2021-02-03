@@ -5,7 +5,7 @@ const MealList = props => {
     return (
         <View style={styles.list}>
             <FlatList 
-            data={displayedMeals} 
+            data={props.listData} 
             keyExtractor={(item, index) => item.id} 
             renderItem={renderMealItem} 
             style={{width: '100%'}}

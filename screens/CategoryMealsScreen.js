@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
 import MealItem from '../components/MealItem';
@@ -31,15 +30,8 @@ const CategoryMealsScreen = props => {
     );
 
     return (
-        <View style={styles.screen}>
-            <FlatList 
-            data={displayedMeals} 
-            keyExtractor={(item, index) => item.id} 
-            renderItem={renderMealItem} 
-            style={{width: '100%'}}
-            />
-        </View>
-    )
+        
+    );
 };
 
 CategoryMealsScreen.navigationOptions = (navigationData) => {
@@ -52,13 +44,5 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
     };
 };
 
-const styles = StyleSheet.create({
-    screen:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '3%',
-    }
-});
 
 export default CategoryMealsScreen;

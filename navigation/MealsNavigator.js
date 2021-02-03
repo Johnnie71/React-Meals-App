@@ -28,7 +28,8 @@ const MealsNavigator = createStackNavigator({
     }
 );
 
-const MealsFavTabNavigator = createBottomTabNavigator({
+const MealsFavTabNavigator = Platform.OS === 'andorid' ? 
+  createMaterialBottomTabNavigator() : createBottomTabNavigator({
     Meals: {screen: MealsNavigator, navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <Ionicons name='ios-restaurant' size={25} color={tabInfo.tintColor} />

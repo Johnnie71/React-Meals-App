@@ -61,7 +61,7 @@ const tabScreenConfig = {
       );
     },
     tabBarColor: Colors.primaryColor,
-    tabBarLabel: <Text style={{ fontWeight: 'bold' }}>Meals</Text>
+    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Meals</Text> : 'meals'
   }},
   Favorites: {screen: FavNavigator, navigationOptions: {
     tabBarLabel: 'Favorites!',

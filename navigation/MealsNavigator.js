@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, } from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons';
 import { Platform } from 'react-native';
 
@@ -11,6 +11,7 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import Colors from '../constants/Colors';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 const defaultStackNavOptions = {
     headerStyle: {
@@ -59,9 +60,9 @@ const tabScreenConfig = {
     tabBarIcon: (tabInfo) => {
       return (
       <Ionicons 
-      name='ios-star' 
-      size={25} 
-      color={tabInfo.tintColor} 
+        name='ios-star' 
+        size={25} 
+        color={tabInfo.tintColor} 
       />
       );
     },

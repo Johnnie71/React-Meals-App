@@ -74,7 +74,8 @@ const tabScreenConfig = {
       />
       );
     },
-    tabBarColor: Colors.accentColor
+    tabBarColor: Colors.accentColor,
+    tabBarLabel: <Text style={{ fontWeight: 'bold' }}>Meals</Text>
   }}
 };
 

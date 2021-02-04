@@ -41,11 +41,16 @@ const CategoriesScreen = props => {
     );
 };
 
-CategoriesScreen.navigationOptions = {
+CategoriesScreen.navigationOptions = (navData) => {
+    return {
     headerTitle: 'Meal Categories',
-    headerLeft: <HeaderButtons HeaderButtonComponent={HeaderButton}> 
-        <Item title="Menu" iconName='ios-menu' onPress={() => {}} />
+    headerLeft: (
+    <HeaderButtons HeaderButtonComponent={HeaderButton}> 
+        <Item title="Menu" iconName='ios-menu' onPress={() => {
+            navData.navigation.toggleDrawer();
+        }} />
     </HeaderButtons>
+    )};
 };
 
 const styles = StyleSheet.create({

@@ -12,6 +12,7 @@ import Colors from '../constants/Colors';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createDrawerNavigator } from 'react-navigation-drawer';
+import FiltersScreen from '../screens/FiltersScreen';
 
 const defaultStackNavOptions = {
     headerStyle: {
@@ -84,5 +85,14 @@ const MealsFavTabNavigator =
                 activeTintColor: Colors.primaryColor
               }
           });
+
+          const FiltersNavigator = createStackNavigator({
+            Filters: FiltersScreen
+          });
+
+const mainNavigator = createDrawerNavigator({
+  MealsFavs: MealsFavTabNavigator,
+  Filters: FiltersNavigator
+});
 
 export default createAppContainer(MealsFavTabNavigator);

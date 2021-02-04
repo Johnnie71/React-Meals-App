@@ -61,7 +61,7 @@ const tabScreenConfig = {
       );
     },
     tabBarColor: Colors.primaryColor,
-    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Meals</Text> : 'meals'
+    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Meals</Text> : 'Meals'
   }},
   Favorites: {screen: FavNavigator, navigationOptions: {
     tabBarLabel: 'Favorites!',
@@ -75,7 +75,7 @@ const tabScreenConfig = {
       );
     },
     tabBarColor: Colors.accentColor,
-    tabBarLabel: <Text style={{ fontWeight: 'bold' }}>Favorites</Text>
+    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Meals</Text> : 'Favorites'
   }}
 };
 

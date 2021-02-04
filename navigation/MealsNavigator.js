@@ -75,7 +75,7 @@ const tabScreenConfig = {
       );
     },
     tabBarColor: Colors.accentColor,
-    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Meals</Text> : 'Favorites'
+    tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontWeight: 'bold' }}>Favorites</Text> : 'Favorites'
   }}
 };
 

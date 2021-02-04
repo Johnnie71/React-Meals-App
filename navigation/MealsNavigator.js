@@ -75,7 +75,7 @@ const tabScreenConfig = {
       );
     },
     tabBarColor: Colors.accentColor,
-    tabBarLabel: <Text style={{ fontWeight: 'bold' }}>Meals</Text>
+    tabBarLabel: <Text style={{ fontWeight: 'bold' }}>Favorites</Text>
   }}
 };
 

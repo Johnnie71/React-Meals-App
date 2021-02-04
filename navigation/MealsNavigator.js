@@ -101,6 +101,10 @@ const mainNavigator = createDrawerNavigator({
     drawerLabel: 'Meals'
   }},
   Filters: FiltersNavigator
+}, {
+  contentOptions: {
+    activeTintColor: Colors.primaryColor
+  }
 });
 
 export default createAppContainer(mainNavigator);

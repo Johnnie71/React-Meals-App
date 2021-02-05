@@ -13,6 +13,8 @@ const MealDetailScreen = props => {
 
     return (
         <ScrollView>
+            <Image />
+            
             <View style={styles.screen}>
                 <Text>{selectedMeal.title}</Text>
                 <Button title="Go Back to Categories" onPress={() => {

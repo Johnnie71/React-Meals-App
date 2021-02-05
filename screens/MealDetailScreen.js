@@ -14,7 +14,11 @@ const MealDetailScreen = props => {
     return (
         <ScrollView>
             <Image />
-            
+            <View style={{ ...styles.mealRow, ...styles.mealDetail }}> 
+                <DefaultText >{props.duration}m</DefaultText>
+                <DefaultText >{props.complexity.toUpperCase()}</DefaultText>
+                <DefaultText >{props.affordability.toUpperCase()}</DefaultText>
+            </View>
             <View style={styles.screen}>
                 <Text>{selectedMeal.title}</Text>
                 <Button title="Go Back to Categories" onPress={() => {

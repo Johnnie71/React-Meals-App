@@ -23,12 +23,6 @@ const MealDetailScreen = props => {
             <Text>List of ingredients...</Text>
             <Text style={styles.title}>Steps</Text>
             <Text>List of Steps...</Text>
-            <View style={styles.screen}>
-                <Text>{selectedMeal.title}</Text>
-                <Button title="Go Back to Categories" onPress={() => {
-                    props.navigation.popToTop();
-                }} />
-            </View>
         </ScrollView>
     )
 };

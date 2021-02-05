@@ -9,7 +9,7 @@ const DefaultText = props => {
 
 const styles = StyleSheet.create({
     text: {
-        
+        fontWeight: 'bold'
     }
 });
 

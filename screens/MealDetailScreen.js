@@ -19,6 +19,7 @@ const MealDetailScreen = props => {
                 <DefaultText >{props.complexity.toUpperCase()}</DefaultText>
                 <DefaultText >{props.affordability.toUpperCase()}</DefaultText>
             </View>
+            <Text style={styles.textTitle}>Ingredients</Text>
             <View style={styles.screen}>
                 <Text>{selectedMeal.title}</Text>
                 <Button title="Go Back to Categories" onPress={() => {

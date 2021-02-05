@@ -12,12 +12,14 @@ const MealDetailScreen = props => {
     const selectedMeal = MEALS.find(meal => meal.id === mealId)
 
     return (
-        <View style={styles.screen}>
-            <Text>{selectedMeal.title}</Text>
-            <Button title="Go Back to Categories" onPress={() => {
-                props.navigation.popToTop();
-            }} />
-        </View>
+        <ScrollView>
+            <View style={styles.screen}>
+                <Text>{selectedMeal.title}</Text>
+                <Button title="Go Back to Categories" onPress={() => {
+                    props.navigation.popToTop();
+                }} />
+            </View>
+        </ScrollView>
     )
 };
 

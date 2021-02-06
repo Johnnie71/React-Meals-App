@@ -62,6 +62,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 15,
         justifyContent: 'space-around'
+    },
+    title:{
+        fontWeight: 'bold',
+        fontSize: 22,
+        textAlign: 'center'
     }
 
 });

@@ -54,11 +54,16 @@ MealDetailScreen.navigationOptions = (navigationData) => {
 };
 
 const styles = StyleSheet.create({
-    screen:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+    image: {
+        width: '100%',
+        height: 200
+    },
+    details: {
+        flexDirection: 'row',
+        padding: 15,
+        justifyContent: 'space-around'
     }
+
 });
 
 export default MealDetailScreen;

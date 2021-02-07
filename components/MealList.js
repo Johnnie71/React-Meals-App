@@ -30,7 +30,6 @@ const MealList = props => {
             renderItem={renderMealItem} 
             style={{width: '100%'}}
             />
-            
         </View>
     )
 };

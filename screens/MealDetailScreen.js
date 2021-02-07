@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         textAlign: 'center'
     },
-    listIem:{
+    listItem:{
         marginVertical: 10,
         marginHorizontal: 20,
         borderColor: '#ccc',

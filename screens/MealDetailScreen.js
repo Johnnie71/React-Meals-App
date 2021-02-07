@@ -30,7 +30,7 @@ const MealDetailScreen = props => {
             <Text style={styles.title}>Ingredients</Text>
             {selectedMeal.ingredients.map(ingredient => <ListItem key={ingredient}>{ingredient}</ListItem>)}
             <Text style={styles.title}>Steps</Text>
-            {selectedMeal.steps.map(step => <Text key={step}>{step}</Text>)}
+            {selectedMeal.steps.map(step => <ListItem key={step}>{step}</ListItem>)}
         </ScrollView>
     )
 };

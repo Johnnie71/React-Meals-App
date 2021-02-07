@@ -5,6 +5,14 @@ import DefaultText from '../components/DefaultText';
 import { MEALS } from '../data/dummy-data';
 import HeaderButton from '../components/HeaderButton';
 
+const ListItem = props => {
+    return (
+        <View style={styles.listItem}>
+            <DefaultText>{props.child}</DefaultText>
+        </View>
+    )
+};
+
 const MealDetailScreen = props => {
 
     const mealId =props.navigation.getParam('mealId');

@@ -75,6 +75,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 15,
         textAlign: 'center'
+    },
+    listIem:{
+        marginVertical: 10,
+        marginHorizontal: 20,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        padding: 10
     }
 
 });

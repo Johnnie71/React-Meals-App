@@ -8,7 +8,7 @@ import HeaderButton from '../components/HeaderButton';
 const ListItem = props => {
     return (
         <View style={styles.listItem}>
-            <DefaultText>{props.child}</DefaultText>
+            <DefaultText>{props.children}</DefaultText>
         </View>
     )
 };
@@ -28,9 +28,13 @@ const MealDetailScreen = props => {
                 <DefaultText >{selectedMeal.affordability.toUpperCase()}</DefaultText>
             </View>
             <Text style={styles.title}>Ingredients</Text>
-            {selectedMeal.ingredients.map(ingredient => <ListItem key={ingredient}>{ingredient}</ListItem>)}
+            {selectedMeal.ingredients.map(ingredient => (
+            <ListItem key={ingredient}>{ingredient}</ListItem>
+            ))}
             <Text style={styles.title}>Steps</Text>
-            {selectedMeal.steps.map(step => <ListItem key={step}>{step}</ListItem>)}
+            {selectedMeal.steps.map(step => (
+            <ListItem key={step}>{step}</ListItem>
+            ))}
         </ScrollView>
     )
 };

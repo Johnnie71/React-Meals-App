@@ -30,7 +30,7 @@ const MealList = props => {
             renderItem={renderMealItem} 
             style={{width: '100%'}}
             />
-            <Text>End of List</Text>
+            
         </View>
     )
 };

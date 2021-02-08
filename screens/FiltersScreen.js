@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
     filterContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '100%',
+        paddingVertical: 20,
     }
 });
 

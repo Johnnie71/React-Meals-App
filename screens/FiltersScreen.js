@@ -18,6 +18,9 @@ const FilterSwitch = props => {
 const FilterScreen = props => {
 
     const [isGlutenFree, setIsGlutenFree] = useState(false);
+    const [isLactose, setIsLactose] = useState(false)
+    const [isVegan, setIsVegan] = useState(false)
+    const [isVegetarian, setIsVegetarian] = useState(false)
     return (
         <View style={styles.screen}>
             <Text>Avaliable Filters / Restrictions</Text>
@@ -37,8 +40,6 @@ const FilterScreen = props => {
                 label='Vegetarian' 
                 state={isGlutenFree} 
                 onChange={newValue => setIsGlutenFree(newValue)} />
-            
-
         </View>
     )
 };

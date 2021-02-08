@@ -4,12 +4,24 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
 
+const FilterSwitch = props => {
+    <View style={styles.filterContainer}>
+        <Text>{props.label}</Text>
+        <Switch 
+        trackColor={{true: Colors.primaryColor}}
+        thumbColor={Colors.primaryColor}
+        value={props.state} 
+        onValueChange={props.onChange} />
+    </View>
+};
+
 const FilterScreen = props => {
 
     const [isGlutenFree, setIsGlutenFree] = useState(false);
     return (
         <View style={styles.screen}>
             <Text>Avaliable Filters / Restrictions</Text>
+            <FilterScreen />
             <View style={styles.filterContainer}>
                 <Text>Gluten-free</Text>
                 <Switch 
@@ -18,6 +30,7 @@ const FilterScreen = props => {
                 value={isGlutenFree} 
                 onValueChange={newValue => setIsGlutenFree(newValue)} />
             </View>
+
         </View>
     )
 };

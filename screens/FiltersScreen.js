@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Switch } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 
@@ -9,6 +9,7 @@ const FilterScreen = props => {
             <Text>Avaliable Filters / Restrictions</Text>
             <View style={styles.filterContainer}>
                 <Text>Gluten-free</Text>
+                <Switch />
             </View>
         </View>
     )

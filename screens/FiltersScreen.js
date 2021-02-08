@@ -8,7 +8,7 @@ const FilterScreen = props => {
         <View style={styles.screen}>
             <Text>Avaliable Filters / Restrictions</Text>
             <View style={styles.filterContainer}>
-
+                <Text>Gluten-free</Text>
             </View>
         </View>
     )

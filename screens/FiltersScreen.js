@@ -7,6 +7,9 @@ const FilterScreen = props => {
     return (
         <View style={styles.screen}>
             <Text>Avaliable Filters / Restrictions</Text>
+            <View style={styles.filterContainer}>
+
+            </View>
         </View>
     )
 };

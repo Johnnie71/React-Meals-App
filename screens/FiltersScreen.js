@@ -21,14 +21,14 @@ const FilterScreen = props => {
     return (
         <View style={styles.screen}>
             <Text>Avaliable Filters / Restrictions</Text>
-            <FilterScreen />
+            <FilterScreen label='Gluten-free' state={isGlutenFree} onChange={newValue => setIsGlutenFree(newValue)} />
             <View style={styles.filterContainer}>
                 <Text>Gluten-free</Text>
                 <Switch 
                 trackColor={{true: Colors.primaryColor}}
                 thumbColor={Colors.primaryColor}
                 value={isGlutenFree} 
-                onValueChange={newValue => setIsGlutenFree(newValue)} />
+                onValueChange={} />
             </View>
 
         </View>

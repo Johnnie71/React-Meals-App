@@ -39,7 +39,9 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     filterContainer: {
-
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center'
     }
 });
 

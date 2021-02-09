@@ -11,7 +11,8 @@ const FilterSwitch = props => {
         trackColor={{true: Colors.primaryColor}}
         thumbColor={Colors.primaryColor}
         value={props.state} 
-        onValueChange={props.onChange} />
+        onValueChange={props.onChange}
+        />
     </View>
     )
 };
@@ -49,13 +50,27 @@ const FilterScreen = props => {
 FilterScreen.navigationOptions = (navData) => {
     return {
     headerTitle: 'Filter Meals',
-    headerLeft: (
+    headerLeft: () => (
     <HeaderButtons HeaderButtonComponent={HeaderButton}> 
-        <Item title="Menu" iconName='ios-menu' onPress={() => {
+        <Item 
+        title="Menu" 
+        iconName='ios-menu' 
+        onPress={() => {
             navData.navigation.toggleDrawer();
         }} />
     </HeaderButtons>
-    )};
+    ),
+    headerRight: () => (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}> 
+        <Item 
+        title="Save" 
+        iconName='ios-save' 
+        onPress={() => {
+            console.log('Saving Filters');
+        }} />
+    </HeaderButtons>
+    )
+};
 };
 
 const styles = StyleSheet.create({

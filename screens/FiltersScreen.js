@@ -5,7 +5,7 @@ import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
 
 const FilterSwitch = props => {
-    <View style={styles.filterContainer}>
+    return (<View style={styles.filterContainer}>
         <Text>{props.label}</Text>
         <Switch 
         trackColor={{true: Colors.primaryColor}}
@@ -13,6 +13,7 @@ const FilterSwitch = props => {
         value={props.state} 
         onValueChange={props.onChange} />
     </View>
+    )
 };
 
 const FilterScreen = props => {
@@ -70,10 +71,10 @@ const styles = StyleSheet.create({
     },
     filterContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        width: '100%',
-        paddingVertical: 20,
+        width: '80%',
+        marginVertical: 20,
     }
 });
 

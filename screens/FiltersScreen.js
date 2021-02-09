@@ -38,7 +38,7 @@ const FilterScreen = props => {
 
     useEffect(() => {
         navigation.setParams({save: saveFilters});
-    }, [saveFilters]);
+    }, [saveFilters, navigation]);
 
     return (
         <View style={styles.screen}>

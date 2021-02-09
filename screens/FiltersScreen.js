@@ -26,7 +26,10 @@ const FilterScreen = props => {
 
     const saveFilters = () => {
         const appliedFilters = {
-
+            glutenFree: isGlutenFree,
+            lactoseFree: isLactoseFree,
+            vegan: isVegan,
+            vegetarian: isVegetarian
         };
     };
 

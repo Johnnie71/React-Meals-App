@@ -17,9 +17,6 @@ const FilterSwitch = props => {
     )
 };
 
-useEffect(() => {
-    props.navigation.setParams({save: saveFilters});
-});
 
 const FilterScreen = props => {
 
@@ -36,6 +33,10 @@ const FilterScreen = props => {
             vegetarian: isVegetarian
         };
     };
+
+    useEffect(() => {
+        props.navigation.setParams({save: saveFilters});
+    }, [saveFilters]);
 
     return (
         <View style={styles.screen}>

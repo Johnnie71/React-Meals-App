@@ -79,7 +79,7 @@ FilterScreen.navigationOptions = (navData) => {
         title="Save" 
         iconName='ios-save' 
         onPress={() => {
-            console.log('Saving Filters');
+            navData.navigation.getParam('save');
         }} />
     </HeaderButtons>
     )

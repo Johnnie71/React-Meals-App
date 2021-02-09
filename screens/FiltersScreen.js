@@ -18,7 +18,7 @@ const FilterSwitch = props => {
 };
 
 useEffect(() => {
-    props.navigation.setParams();
+    props.navigation.setParams({save: saveFilters});
 });
 
 const FilterScreen = props => {

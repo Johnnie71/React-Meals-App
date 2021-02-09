@@ -18,7 +18,7 @@ const FilterSwitch = props => {
 const FilterScreen = props => {
 
     const [isGlutenFree, setIsGlutenFree] = useState(false);
-    const [isLactose, setIsLactose] = useState(false)
+    const [isLactoseFree, setIsLactoseFree] = useState(false)
     const [isVegan, setIsVegan] = useState(false)
     const [isVegetarian, setIsVegetarian] = useState(false)
     return (
@@ -30,16 +30,16 @@ const FilterScreen = props => {
                 onChange={newValue => setIsGlutenFree(newValue)} />
             <FilterScreen 
                 label='Lactose-free' 
-                state={isGlutenFree} 
-                onChange={newValue => setIsGlutenFree(newValue)} />
+                state={isLactoseFree} 
+                onChange={newValue => setIsLactoseFree(newValue)} />
             <FilterScreen 
                 label='Vegan' 
-                state={isGlutenFree} 
-                onChange={newValue => setIsGlutenFree(newValue)} />
+                state={isVegan} 
+                onChange={newValue => setIsVegan(newValue)} />
             <FilterScreen 
                 label='Vegetarian' 
-                state={isGlutenFree} 
-                onChange={newValue => setIsGlutenFree(newValue)} />
+                state={isVegetarian} 
+                onChange={newValue => setIsVegetarian(newValue)} />
         </View>
     )
 };

@@ -11,6 +11,10 @@ import mealsReducer from './store/reducers/meals';
 
 enableScreens();
 
+const rootReducer = combineReducers({
+    meals: mealsReducer
+});
+
 const store = createStore();
 
 const fetchFonts = () => {

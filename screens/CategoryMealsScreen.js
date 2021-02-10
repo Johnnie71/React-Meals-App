@@ -10,7 +10,7 @@ const CategoryMealsScreen = props => {
 
     const avaliableMeals = useSelector(state => state.meals.filteredMeals);
 
-    const displayedMeals = MEALS.filter(
+    const displayedMeals = avaliableMeals.filter(
         meal => meal.categoryIds.indexOf(catId) >= 0
     );
 

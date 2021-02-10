@@ -40,7 +40,9 @@ export default function App() {
   }
 
   return (
-    <MealsNavigator />
+    <Provider>
+      <MealsNavigator />
+    </Provider>
   );
 }
 

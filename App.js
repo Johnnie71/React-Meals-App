@@ -11,6 +11,8 @@ import mealsReducer from './store/reducers/meals';
 
 enableScreens();
 
+const store = createStore();
+
 const fetchFonts = () => {
    return Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans_Regular.ttf'),

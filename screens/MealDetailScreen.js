@@ -19,7 +19,9 @@ const MealDetailScreen = props => {
 
     const mealId =props.navigation.getParam('mealId');
 
-    const selectedMeal = availableMeals.find(meal => meal.id === mealId)
+    const selectedMeal = availableMeals.find(meal => meal.id === mealId);
+
+    props.navigation.setParams({mealTitle: selectedMeal.title});
 
     return (
         <ScrollView>

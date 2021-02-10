@@ -8,6 +8,8 @@ const CategoryMealsScreen = props => {
 
     const catId = props.navigation.getParam('categoryId');
 
+    const avaliableMeals = useSelector(state => state);
+
     const displayedMeals = MEALS.filter(
         meal => meal.categoryIds.indexOf(catId) >= 0
     );

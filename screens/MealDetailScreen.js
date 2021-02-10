@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, View, Image, Text, StyleSheet, Button } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import DefaultText from '../components/DefaultText';
-import { MEALS } from '../data/dummy-data';
+import { useSelector } from 'react-redux';
 import HeaderButton from '../components/HeaderButton';
 
 const ListItem = props => {

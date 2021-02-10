@@ -6,6 +6,8 @@ import HeaderButton from '../components/HeaderButton';
 
 const FavoritesScreen = props => {
 
+    const availableMeals = useSelector(state => state.meals.meals);
+
     const favMeals = MEALS.filter(meal => meal.id === 'm1' || meal.id === 'm2');
     return <MealList listData={favMeals} navigation={props.navigation} />
 };

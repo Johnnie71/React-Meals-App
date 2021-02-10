@@ -1,9 +1,9 @@
 import { MEALS } from '../../data/dummy-data';
 
 const initialState = {
-    meals: , 
-    filteredMeals: ,
-    favoriteMeals:
+    meals: MEALS, 
+    filteredMeals: MEALS,
+    favoriteMeals: [],
 }
 
 

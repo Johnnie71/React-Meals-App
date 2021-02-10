@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
     meals: mealsReducer
 });
 
-const store = createStore();
+const store = createStore(rootReducer);
 
 const fetchFonts = () => {
    return Font.loadAsync({

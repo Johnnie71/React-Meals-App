@@ -23,7 +23,7 @@ const MealDetailScreen = props => {
 
     useEffect(() => {
         props.navigation.setParams({mealTitle: selectedMeal.title});
-    });
+    }, [selectedMeal]);
 
     
 

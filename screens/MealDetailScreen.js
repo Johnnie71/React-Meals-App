@@ -18,7 +18,7 @@ const MealDetailScreen = props => {
     const availableMeals = useSelector(state => state.meals.meals);
 
     const mealId =props.navigation.getParam('mealId');
-
+    
     const selectedMeal = availableMeals.find(meal => meal.id === mealId);
 
     useEffect(() => {
@@ -50,6 +50,7 @@ const MealDetailScreen = props => {
 MealDetailScreen.navigationOptions = (navigationData) => {
 
     const mealId = navigationData.navigation.getParam('mealId');
+    const mealTitle = navigationData.navigation.getParam('mealTitle')
     const selectedMeal = MEALS.find(meal => meal.id === mealId);
 
     return {

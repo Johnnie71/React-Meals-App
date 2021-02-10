@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, Image, Text, StyleSheet, Button } from 'react-native';
+import { ScrollView, View, Image, Text, StyleSheet } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import DefaultText from '../components/DefaultText';
 import { useSelector } from 'react-redux';
@@ -19,7 +19,7 @@ const MealDetailScreen = props => {
 
     const mealId =props.navigation.getParam('mealId');
 
-    const selectedMeal = MEALS.find(meal => meal.id === mealId)
+    const selectedMeal = availableMeals.find(meal => meal.id === mealId)
 
     return (
         <ScrollView>

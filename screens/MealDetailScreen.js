@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ScrollView, View, Image, Text, StyleSheet } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import DefaultText from '../components/DefaultText';
@@ -21,7 +21,11 @@ const MealDetailScreen = props => {
 
     const selectedMeal = availableMeals.find(meal => meal.id === mealId);
 
-    props.navigation.setParams({mealTitle: selectedMeal.title});
+    useEffect(() => {
+        props.navigation.setParams({mealTitle: selectedMeal.title});
+    });
+
+    
 
     return (
         <ScrollView>

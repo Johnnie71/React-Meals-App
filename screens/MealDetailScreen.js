@@ -4,6 +4,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import DefaultText from '../components/DefaultText';
 import { useSelector, useDispatch } from 'react-redux';
 import HeaderButton from '../components/HeaderButton';
+import { toggleFavorite } from '../store/actions/meals';
 
 const ListItem = props => {
     return (

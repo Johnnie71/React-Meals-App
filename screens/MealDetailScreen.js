@@ -21,6 +21,10 @@ const MealDetailScreen = props => {
     
     const selectedMeal = availableMeals.find(meal => meal.id === mealId);
 
+    const dispatch = useDispatch();
+
+   
+
     // useEffect(() => {
     //     props.navigation.setParams({mealTitle: selectedMeal.title});
     // }, [selectedMeal]);

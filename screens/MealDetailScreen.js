@@ -58,7 +58,8 @@ const MealDetailScreen = props => {
 MealDetailScreen.navigationOptions = (navigationData) => {
 
     // const mealId = navigationData.navigation.getParam('mealId');
-    const mealTitle = navigationData.navigation.getParam('mealTitle')
+    const mealTitle = navigationData.navigation.getParam('mealTitle');
+    const toggleFavorite = navigationData.navigation.getParam('toggleFav')
     // const selectedMeal = MEALS.find(meal => meal.id === mealId);
 
     return {

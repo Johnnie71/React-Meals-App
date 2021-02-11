@@ -25,7 +25,7 @@ const MealDetailScreen = props => {
     const dispatch = useDispatch();
 
    const toggleFavoriteHandler = () => {
-       dispatch()
+       dispatch(toggleFavorite(mealId))
    }
 
     // useEffect(() => {

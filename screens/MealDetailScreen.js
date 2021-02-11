@@ -23,7 +23,9 @@ const MealDetailScreen = props => {
 
     const dispatch = useDispatch();
 
-   
+   const toggleFavoriteHandler = () => {
+       dispatch()
+   }
 
     // useEffect(() => {
     //     props.navigation.setParams({mealTitle: selectedMeal.title});

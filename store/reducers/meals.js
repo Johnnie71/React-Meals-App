@@ -11,10 +11,10 @@ const initialState = {
 const mealsReducer = (state = initialState, action) => {
     switch (action.type){
         case TOGGLE_FAVORITE:
-            default:
+            const existingIndex = state.favoriteMeals.findIndex(meal =>meal.id === action.mealId);
+        default:
                 return state;
     }
-    return state;
 };
 
 export default mealsReducer;

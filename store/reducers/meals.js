@@ -11,7 +11,8 @@ const initialState = {
 const mealsReducer = (state = initialState, action) => {
     switch (action.type){
         case TOGGLE_FAVORITE:
-            
+            default:
+                return state;
     }
     return state;
 };

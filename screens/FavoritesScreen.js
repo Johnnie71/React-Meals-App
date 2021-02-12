@@ -33,6 +33,10 @@ FavoritesScreen.navigationOptions = (navData) => {
     )};
 };
 
-
+const styles = StyleSheet.create({
+    content: {
+        
+    }
+});
 
 export default FavoritesScreen;

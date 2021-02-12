@@ -17,7 +17,7 @@ const ListItem = props => {
 const MealDetailScreen = props => {
 
     const availableMeals = useSelector(state => state.meals.meals);
-    const favoriteMeals = useSelector(state => state.meals.favoriteMeals)
+    const currentMealIsFavorite = useSelector(state => state.meals.favoriteMeals.some(meal => meal.id === mealId))
 
     const mealId =props.navigation.getParam('mealId');
     

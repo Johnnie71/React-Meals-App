@@ -38,7 +38,7 @@ const mealsReducer = (state = initialState, action) => {
                 }
                 return true;
             });
-            return { ...state, filteredMeals: updatedfilteredMeals }
+            return { ...state, filteredMeals: updatedfilteredMeals };
         default:
                 return state;
     }

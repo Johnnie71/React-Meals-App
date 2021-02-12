@@ -36,7 +36,7 @@ const MealDetailScreen = props => {
 
     useEffect(() => {
         props.navigation.setParams({isFav: currentMealIsFavorite})
-    });
+    }, [currentMealIsFavorite]);
 
     return (
         <ScrollView>

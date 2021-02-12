@@ -22,6 +22,7 @@ const mealsReducer = (state = initialState, action) => {
                 return { ...state, favoriteMeals: state.favoriteMeals.concat(meal)}
             }
         case SET_FILTERS:
+            const appliedFilters = actions.filters;
             
         default:
                 return state;

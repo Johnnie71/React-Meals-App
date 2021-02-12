@@ -27,6 +27,9 @@ const mealsReducer = (state = initialState, action) => {
                 if(appliedFilters.glutenFree && !meal.isGlutenFree){
                     return false;
                 }
+                if(appliedFilters.lactoseFree && !meal.isLactoseFree){
+                    return false;
+                }
             })
         default:
                 return state;

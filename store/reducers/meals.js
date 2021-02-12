@@ -1,6 +1,6 @@
 import { $CombinedState } from 'redux';
 import { MEALS } from '../../data/dummy-data';
-import { TOGGLE_FAVORITE } from '../actions/meals';
+import { SET_FILTERS, TOGGLE_FAVORITE } from '../actions/meals';
 
 const initialState = {
     meals: MEALS, 
@@ -21,6 +21,8 @@ const mealsReducer = (state = initialState, action) => {
                 const meal = state.meals.find(meal => meal.id === action.mealId);
                 return { ...state, favoriteMeals: state.favoriteMeals.concat(meal)}
             }
+        case SET_FILTERS:
+            
         default:
                 return state;
     }

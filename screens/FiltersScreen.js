@@ -39,7 +39,7 @@ const FilterScreen = props => {
         };
 
         dispatch();
-    }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian, dispatch]);
+    }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian, dispatch ]);
 
     useEffect(() => {
         navigation.setParams({save: saveFilters});

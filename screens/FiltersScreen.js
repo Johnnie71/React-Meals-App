@@ -28,6 +28,8 @@ const FilterScreen = props => {
     const [isVegan, setIsVegan] = useState(false);
     const [isVegetarian, setIsVegetarian] = useState(false);
 
+    const dispatch = useDispatch();
+
     const saveFilters = useCallback(() => {
         const appliedFilters = {
             glutenFree: isGlutenFree,

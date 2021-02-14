@@ -4,6 +4,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
 import { useDispatch } from 'react-redux';
+import { setFilters } from '../store/actions/meals'
 
 const FilterSwitch = props => {
     return (<View style={styles.filterContainer}>

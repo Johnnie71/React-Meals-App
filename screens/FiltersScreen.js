@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Switch } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
+import { useDispatch } from 'react-redux';
 
 const FilterSwitch = props => {
     return (<View style={styles.filterContainer}>
@@ -34,7 +35,6 @@ const FilterScreen = props => {
             vegan: isVegan,
             vegetarian: isVegetarian
         };
-        console.log(appliedFilters)
     }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian]);
 
     useEffect(() => {

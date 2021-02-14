@@ -14,6 +14,12 @@ const CategoryMealsScreen = props => {
         meal => meal.categoryIds.indexOf(catId) >= 0
     );
 
+    if(displayedMeals.length === 0){
+        return(
+            
+        )
+    }
+
     return (
         <MealList listData={displayedMeals} navigation={props.navigation} />
     );

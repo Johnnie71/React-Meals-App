@@ -40,5 +40,8 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
     };
 };
 
+const styles = StyleSheet.create({
+
+});
 
 export default CategoryMealsScreen;

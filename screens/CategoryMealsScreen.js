@@ -4,7 +4,6 @@ import { View, StyleSheet } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
 import MealList from '../components/MealList';
-import { View } from 'react-native';
 import DefaultText from '../components/DefaultText';
 
 const CategoryMealsScreen = props => {

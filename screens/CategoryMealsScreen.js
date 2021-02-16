@@ -23,7 +23,7 @@ const CategoryMealsScreen = props => {
                 <DefaultText>No meals found, maybe check your filters?</DefaultText>
             </View>
         )
-    }
+    };
 
     return (
         <MealList listData={displayedMeals} navigation={props.navigation} />

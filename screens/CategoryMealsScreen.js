@@ -19,7 +19,9 @@ const CategoryMealsScreen = props => {
 
     if(displayedMeals.length === 0){
         return(
-            
+            <View>
+                
+            </View>
         )
     }
 
